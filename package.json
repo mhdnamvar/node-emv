@@ -1,8 +1,7 @@
 {
   "name": "node-emv",
-  "version": "1.0.22",
+  "version": "1.0.23",
   "description": "The EMV parser library",
-
   "main": "emv.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,10 +11,26 @@
     "url": "https://github.com/mhdnamvar/node-emv.git"
   },
   "keywords": [
-    "EMV", "Parser",
-    "TLV", "BER-TLV", "Payment", "Banking", "Finance",
-    "Smart Card", "EMV Tag", "EFT", "POS", "Terminal", "Transaction",
-    "Chip Card", "cardholder", "Issuer", "Acquirer", "Cryptogram", "ISO 8583", "ISO 7816",
+    "EMV",
+    "Parser",
+    "TLV",
+    "BER-TLV",
+    "Payment",
+    "Banking",
+    "Finance",
+    "Smart Card",
+    "EMV Tag",
+    "EFT",
+    "POS",
+    "Terminal",
+    "Transaction",
+    "Chip Card",
+    "cardholder",
+    "Issuer",
+    "Acquirer",
+    "Cryptogram",
+    "ISO 8583",
+    "ISO 7816",
     "Personalization"
   ],
   "author": "Mohammad Namvar, namvar@gmail.com",
