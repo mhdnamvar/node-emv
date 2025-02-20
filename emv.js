@@ -114,24 +114,24 @@ function aip(aip_data, callback){
 	var aip_bin = util.pad(util.Hex2Bin(aip_data), 16);
 	var data = [];
 	var Byte1 = [
-		{ 'bit' : '8' , 'value' : aip_bin.substring(0, 1), 'description' : 'RFU'},
+		{ 'bit' : '8' , 'value' : aip_bin.substring(0, 1), 'description' : 'XDA supported'},
 		{ 'bit' : '7' , 'value' : aip_bin.substring(1, 2), 'description' : 'SDA supported'},
 		{ 'bit' : '6' , 'value' : aip_bin.substring(2, 3), 'description' : 'DDA supported'},
-		{ 'bit' : '5' , 'value' : aip_bin.substring(3, 4), 'description' : 'Cardholder verification supported' } ,
-		{ 'bit' : '4' , 'value' : aip_bin.substring(4, 5), 'description' : 'Terminal risk Management to be performed' } ,
-		{ 'bit' : '3' , 'value' : aip_bin.substring(5, 6), 'description' : 'Issuer authentication supported'} ,
-		{ 'bit' : '2' , 'value' : aip_bin.substring(6, 7), 'description' : 'RFU' } ,
+		{ 'bit' : '5' , 'value' : aip_bin.substring(3, 4), 'description' : 'Cardholder verification is supported' } ,
+		{ 'bit' : '4' , 'value' : aip_bin.substring(4, 5), 'description' : 'Terminal risk Management is to be performed' } ,
+		{ 'bit' : '3' , 'value' : aip_bin.substring(5, 6), 'description' : 'Issuer authentication is supported'} ,
+		{ 'bit' : '2' , 'value' : aip_bin.substring(6, 7), 'description' : 'On device cardholder verification is supported' } ,
 		{ 'bit' : '1' , 'value' : aip_bin.substring(7, 8), 'description' : 'CDA supported'}
 	];
 	var Byte2 = [
-		{ 'bit' : '8' , 'value' : aip_bin.substring(8, 9),   'description' : 'RFU'},
+		{ 'bit' : '8' , 'value' : aip_bin.substring(8, 9),   'description' : 'EMV mode is supported'},
 		{ 'bit' : '7' , 'value' : aip_bin.substring(9, 10),  'description' : 'RFU'},
 		{ 'bit' : '6' , 'value' : aip_bin.substring(10, 11), 'description' : 'RFU'},
 		{ 'bit' : '5' , 'value' : aip_bin.substring(11, 12), 'description' : 'RFU'},
 		{ 'bit' : '4' , 'value' : aip_bin.substring(12, 13), 'description' : 'RFU'},
 		{ 'bit' : '3' , 'value' : aip_bin.substring(13, 14), 'description' : 'RFU'},
 		{ 'bit' : '2' , 'value' : aip_bin.substring(14, 15), 'description' : 'RFU'},
-		{ 'bit' : '1' , 'value' : aip_bin.substring(15, 16), 'description' : 'RFU'},
+		{ 'bit' : '1' , 'value' : aip_bin.substring(15, 16), 'description' : 'Relay resistance protocol is supported'},
 	];
 data.push(Byte1, Byte2);
 	callback(data);
